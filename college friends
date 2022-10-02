@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std
+
+int main()
+{
+cout<<"A friend in need should always be helped"<<endl;
+//Change in comment for pull requests.
+return 0;
+}
