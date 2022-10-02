@@ -4,6 +4,6 @@ using namespace std
 int main()
 {
 cout<<"A friend in need should always be helped"<<endl;
-//Change in comment for pull requests.
+cout<<"Mein lekr rahunga Tshirt"<<endl;
 return 0;
 }
