@@ -1,0 +1,102 @@
+#include<stdio.h>
+ 
+int hash(int key)
+{
+    int index;
+     index=key%10;
+    return index;
+}
+void display(int arr[],int size)
+{
+	int i;
+    for( i=0;i<size;i++)
+    {     
+        if(arr[i]!=-1)
+        printf("%d\t%d",i,arr[i]);
+        else
+        printf("%d\tEmpty",i);
+        printf("\n");
+    }
+} 
+void insert(int arr[],int key)
+{
+	int i;
+   int index=hash(key);
+    if(arr[index]==-1)
+    arr[index]=key;
+    else   {
+
+    for( i=(index+1)%10;i!=index;i=(i+1)%10)
+     {
+        if(arr[i]==-1)
+        {
+            arr[i]=key;
+           break;   
+        }
+        else continue;
+    }
+    printf("There is no space to store elements\n");
+    }
+}
+int  search(int arr[],int key)
+{
+int i;
+    int index=hash(key);
+    if(arr[index]==key)      {
+        return index;
+      }
+
+    else
+    for( i=(index+1)%10;i!=index;i=(i+1)%10)
+ 
+    {
+
+        if(arr[i]==key)
+      {
+            return i;
+         break;            
+        }
+     else continue;
+   }
+    return -1;
+}
+int main()
+
+ {
+
+ 
+    int arr[10]={-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
+ 
+    int key;
+    int option=1;
+ while(1)
+   {    
+
+    printf("Menu\t 1.Display \n 2.Insert \n 3.Search\n 4. Exit\n Enter choice no. : ");
+ scanf("%d",&option);
+    if(option==1)
+ {
+     display(arr,10);
+    }
+    else if (option==2)
+    {
+        printf("Enter Key : ");
+        scanf("%d",&key);
+        insert(arr, key);        
+}
+    else if(option==3)
+    {
+        printf("Enter Key : ");
+        scanf("%d",&key);
+        int INDEX=search(arr, key);
+        if(INDEX!=-1)
+        printf("The searched key is at index %d",INDEX);
+        else printf("Element not found \n");
+    }
+    else if(option==4)
+        break;
+    else printf("Enter a correct choice ");
+}
+    return 0;
+}
+
