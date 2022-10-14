@@ -1,0 +1,103 @@
+*{
+    background-color: #262626;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 60px;
+}
+
+#player1, #player2{
+    background-color: white;
+    color: black;
+}
+
+.intro{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.choice{
+    display:none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.board{
+    display: none;
+    text-align: center;
+}
+
+#c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9{    
+    border-style: solid;
+    border-color: white;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.board p{
+    font-size: 40px;
+    font-family: cursive;
+    color: black;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+.btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+}
+
+
+.scorecard{
+    text-align: center;
+    display: none;
+}
+
+.scorecard table{
+    border: 1px solid #ddd;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+.scorecard table caption{
+    margin-bottom: 20px;
+}
+
+.scorecard table td{
+    width: 150px;
+    height: 50px;
+    border:0.5px solid #ddd;
+}
