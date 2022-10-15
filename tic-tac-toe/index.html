@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="intro" id="intro">
+        <h2>Who's playing?</h2>
+        <input type="text" name="player1" id="player1" placeholder="player1"> 
+        <br>
+        <br>
+        <input type="text" name="player2" id="player2" placeholder="player2"> 
+        <br>
+        <br>
+        <button class="btn" onclick="ready()"> Ready </button>
+    </div>
+    <div class="choice" id="choice">
+        <h3>Who's starting?</h3>
+        <input type="radio" name="Start" id="p1" value="p1">
+        <label for="p1" id="p1-name"></label>
+        <input type="radio" name="Start" id="p2" value="p2">
+        <label for="p2" id="p2-name"></label>
+        <br>
+        <br>
+        <button class="btn" onclick="start()"> Start </button>
+    </div>
+    <br>
+    <br>
+    <div class="board" id="board">
+        <input type="text" id="c1" onclick="fb1(); func();" readonly disabled>
+        <input type="text" id="c2" onclick="fb2(); func();" readonly disabled>
+        <input type="text" id="c3" onclick="fb3(); func();" readonly disabled>
+        <br>
+        <br>
+        <input type="text" id="c4" onclick="fb4(); func();" readonly disabled>
+        <input type="text" id="c5" onclick="fb5(); func();" readonly disabled>
+        <input type="text" id="c6" onclick="fb6(); func();" readonly disabled>
+        <br>
+        <br>
+        <input type="text" id="c7" onclick="fb7(); func();" readonly disabled>
+        <input type="text" id="c8" onclick="fb8(); func();" readonly disabled>
+        <input type="text" id="c9" onclick="fb9(); func();" readonly disabled>
+        <br>
+        <p id="print"></p>
+        <button class="btn" id="viewScore" onclick="viewScore()"> View Score </button>
+        <button class="btn" id="reset" onclick="reset()"> Reset </button>
+    </div>
+    <div class="scorecard" id="score">
+        <table>
+            <caption><h2>Leaderboard</h2></caption>
+            <tr>
+                <td id="name1"></td>
+                <td id="score1"></td>
+            </tr>
+            <tr>
+                <td id="name2"></td>
+                <td id="score2"></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <button class="btn" id="newGame" onclick="newGame()"> New Game </button>
+        <br>
+        <br>
+        <button class="btn" id="end" onclick="end()"> End </button>
+    </div>
+
+</body>
+</html>
